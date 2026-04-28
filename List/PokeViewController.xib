@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokeViewController" customModule="pokeapi" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="DG1-p2-YMA" id="mBx-Xo-R4N"/>
+                <outlet property="botonAtras" destination="xJh-SB-kMl" id="Jfj-zA-Axz"/>
+                <outlet property="botonDelante" destination="Qen-4I-r50" id="AVS-IR-xIp"/>
+                <outlet property="tableView" destination="kLf-p4-OC2" id="HFq-y2-9Zq"/>
+                <outlet property="view" destination="iN0-l3-epB" id="lKw-7o-LgA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kLf-p4-OC2">
+                    <rect key="frame" x="-12" y="0.0" width="393" height="852"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DG1-p2-YMA">
+                    <rect key="frame" x="186" y="416" width="70" height="70"/>
+                    <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                    <color key="color" systemColor="labelColor"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qen-4I-r50" userLabel="ButtonDelante">
+                    <rect key="frame" x="297" y="87" width="42" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="-&gt;"/>
+                    <connections>
+                        <action selector="tocarDelante:" destination="-1" eventType="touchUpInside" id="kKP-jH-17R"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJh-SB-kMl" userLabel="ButtonAtras">
+                    <rect key="frame" x="42" y="87" width="42" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="&lt;-"/>
+                    <connections>
+                        <action selector="tocarAtras:" destination="-1" eventType="touchUpInside" id="x5M-Cd-GqL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="DG1-p2-YMA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RUr-BP-18v"/>
+                <constraint firstItem="DG1-p2-YMA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="g0l-QD-DZi"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="134"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
